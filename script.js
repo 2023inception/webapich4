@@ -1,17 +1,28 @@
-const myButton = document.getElementbyId("button");
+const questionElement = document.getElementById("question");
+const optionsElement = document.getElementbyId("options");
 
-myButton.addEventListener("click", function() {
-//code to be executed when the button is clicked
+let currentQuestionIndex = 0;
+
+//A function to index the questions. Getting each question element and setting it to the current question
+function loadQuestion() {
+    const currentQuestion = questions[currentQuestionIndex];
+    questionElement.textContent = currentQuestion.questionText; 
+}
 
 
+currentQuestion.options.forEach((optionText, index) => {
+const optionElement = document.createElement("div"); 
+optionElement.textContent = options; 
+optionElement.addEventListener("click", () => checkAnswer(options)); 
+optionsElement.appendChild(optionsElement); 
+    
 });
-
 
 
 const questions = [
 
 {
-    question: "What does the DOM stand for in Javascript?",
+    questionText: "What does the DOM stand for in Javascript?",
     options: {
     a: "Document Object Model",
     b: "Dynamic Object Manipulation",
@@ -21,7 +32,7 @@ const questions = [
     correctAnswer: "a",
 },
 {
-    question:"Which keyword is used to declare a variable in Javascript with block scope?",
+    questionText:"Which keyword is used to declare a variable in Javascript with block scope?",
     options: {
         a: "var",
         b: "let",
@@ -31,7 +42,7 @@ const questions = [
     correctAnswer: "b",
 }
 {
-    question:"What does NaN in JavaScript stand for?",
+    questionText:"What does NaN in JavaScript stand for?",
     options: {
         a:"Not a number",
         b:"Negative and Negative",
@@ -41,7 +52,7 @@ const questions = [
     correctAnswer: "a",
 }
 {
-    question:"What is the purpose of the addEventListener method in Javascript?",
+    questionText:"What is the purpose of the addEventListener method in Javascript?",
     options: {
         a:"to perform mathematical caculations",
         b:"to add styles to HTML elements",
@@ -51,7 +62,7 @@ const questions = [
     correctAnswer: "c",
 }
 {
-    question:"What is the purpose of the typeof operator in Javascript?",
+    questionText:"What is the purpose of the typeof operator in Javascript?",
     options: {
         a:"to check if a variable is defined",
         b:"to determine the data type of a value",
@@ -61,7 +72,7 @@ const questions = [
     correctAnswer: "b",
 }
 {
-    question:"Which of the following is used to iterate over the properties of an object in JavaScript?",
+    questionText:"Which of the following is used to iterate over the properties of an object in JavaScript?",
     options: {
         a:"for loop",
         b:"while loop",
@@ -71,7 +82,7 @@ const questions = [
     correctAnswer: "d",
 }
 {
-    question:"What is the purpose of the parseInt function in JavaScript?",
+    questionText:"What is the purpose of the parseInt function in JavaScript?",
     options: {
         a:"to check if a string is empty",
         b:"to convert a string to an integer",
@@ -82,3 +93,4 @@ const questions = [
 }
 
 ];
+
