@@ -1,24 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="./Assets/styles.css"/> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javascript Quiz Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>Javascript Quiz</title>
 </head>
 <body>
-    <div class="quiz-container">
-        <div>
-        <h1>Coding Quiz Challenge</h1>
-        <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
-        <h2 class="question" id="question"></h2>
-        <div class="options" id="options">
-            <!-- Answer options go here -->
+    <div class="container">
+        <h1>Code Quiz</h1>
+        <button id="start-button">Start Quiz</button>
+        <div id="question-container">
+            <h2>Question 1</h2>
+            <p>What does the DOM stand for in Javascript?</p>
+            <div id="answer-options"></div>
+            <button id="submit-button">Submit</button>
         </div>
-        <button id="startbutton">Start</button>
+        <div id="result-container"></div>
+        <div id="timer">Time: <span id="time-left">60</span> seconds</div>
     </div>
+
+    <div class="container">
+        <div id="game-over-container">
+            <h2>Game Over!</h2>
+            <p>Your score: <span id="final-score">0</span></p>
+            <label for="initials">Enter your initials:</label>
+            <input type="text" id="initials">
+            <button id="save-score-button">Save Score</button>
+        </div>
     </div>
-    
+
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>
