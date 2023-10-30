@@ -153,6 +153,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     saveScoreButton.addEventListener("click", function() {
         const initials = initialsInput.value;
-        // You can save the initials and score using your preferred method, e.g., local storage, a server, etc.
+        //file save 
     });
 });
